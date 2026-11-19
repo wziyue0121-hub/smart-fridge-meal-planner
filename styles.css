@@ -1,0 +1,128 @@
+:root {
+    --page-bg: #f2f6f3;
+    --card-bg: #ffffff;
+    --text: #1d3028;
+    --primary: #236447;
+    --primary-hover: #194b35;
+    --border: #d5e1d9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+    background: var(--page-bg);
+    color: var(--text);
+    font: 16px/1.5 Inter, "Microsoft YaHei", sans-serif;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.03em;
+}
+
+section {
+    margin-bottom: 16px;
+    padding: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgb(29 48 40 / 5%);
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-size: 1.25rem;
+}
+
+#add-ingredient-form {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    max-width: 540px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+select,
+button {
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input,
+select {
+    width: 100%;
+    background: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+#add-ingredient-form button {
+    grid-column: 2;
+    justify-self: start;
+    border: 0;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#add-ingredient-form button:hover {
+    background: var(--primary-hover);
+}
+
+:where(input, select, button):focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+#inventory-message:empty {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    section {
+        padding: 16px;
+    }
+
+    #add-ingredient-form {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    #add-ingredient-form button {
+        grid-column: 1;
+        justify-self: stretch;
+        margin-top: 8px;
+    }
+}
+#inventory-list {
+    display: grid;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+#inventory-list li {
+    padding: 16px;
+    background: #f7faf8;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+#empty-inventory {
+    color: #596b61;
+}

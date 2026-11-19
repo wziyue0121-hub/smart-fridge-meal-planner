@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <link rel="stylesheet" href="./styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fridge</title>
+</head>
+<body>
+    <h1>Smart Fridge</h1>
+
+    <section id="inventory">
+    <h2>库存管理</h2>
+
+    <form id="add-ingredient-form">
+        <label for="ingredient">食材</label>
+        <select id="ingredient" name="ingredientId" required>
+            <option value="">请选择食材</option>
+            <option value="egg">鸡蛋（个）</option>
+            <option value="tomato">番茄（个）</option>
+        </select>
+
+        <label for="quantity">数量</label>
+        <input id="quantity" name="quantity" type="number" min="0" step="1" required>
+
+        <label for="expiry-date">到期日期</label>
+        <input id="expiry-date" name="expiryDate" type="date" required>
+
+        <button type="submit">新增食材</button>
+    </form>
+<h3>当前库存</h3>
+<p id="empty-inventory">目前没有食材，请先新增。</p>
+<ul id="inventory-list"></ul>
+    <p id="inventory-message" role="status"></p>
+</section>
+    <section id="expiry-settings"><h2>临期设置</h2></section>
+    <section id="recommendations"><h2>菜谱推荐</h2></section>
+    <section id="meal-plan"><h2>备餐与购物清单</h2></section>
+    <script type="module" src="./inventory.js"></script>
+</body>
+</html>
