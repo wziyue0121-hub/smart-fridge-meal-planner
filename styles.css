@@ -126,3 +126,35 @@ select {
 #empty-inventory {
     color: #596b61;
 }
+#inventory-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.edit-button {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background: #eaf3ed;
+}
+
+
+#add-ingredient-form #cancel-edit {
+    background: #e8eee9;
+    color: var(--text);
+}
+
+#add-ingredient-form #cancel-edit:hover {
+    background: #dce6df;
+}
+
+#cancel-edit[hidden] {
+    display: none;
+}
