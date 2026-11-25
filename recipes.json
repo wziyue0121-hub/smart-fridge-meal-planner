@@ -1,0 +1,4 @@
+[
+  {"id":"recipe-a","name":"番茄炒蛋","ingredients":[{"ingredientId":"egg","unit":"pcs","quantity":3},{"ingredientId":"tomato","unit":"pcs","quantity":1}]},
+  {"id":"recipe-b","name":"蒸蛋","ingredients":[{"ingredientId":"egg","unit":"pcs","quantity":3}]}
+]
